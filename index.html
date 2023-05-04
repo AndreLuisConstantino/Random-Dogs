@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/dogs.css">
+    <script src="./js/app.js"></script>
+    <script src="./js/router.js"></script>
+    <title>Random Pics of Dogs</title>
+</head>
+<body>
+    <header>
+        <img src="./img/dog-side.png" alt="Logo">
+        <nav>
+            <ul class="menu">
+                <li>
+                    <a href="/" class="home" onclick="route()">Home</a>
+                </li>
+                <li>
+                    <a href="/dogs" class="dogs" onclick="route()">Random Dogs</a>
+                </li>
+                <li>
+                    <a href="/api" class="api" onclick="route()">Info About API</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="root">
+        <div class="title__container">
+            <h1>Welcome to the Random Pictures</h1>
+            <h1>of Dogs Site!</h1>
+        </div>
+    </main>
+    <footer> Copyright © | 2023 | André Luiz :)</footer>
+</body>
+</html>
