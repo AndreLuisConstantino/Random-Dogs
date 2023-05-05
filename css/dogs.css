@@ -22,3 +22,11 @@ button {
     font-weight: 700;
     font-size: 1.5rem;
 }
+
+.container__dogs {
+    grid-row: 2;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+}
