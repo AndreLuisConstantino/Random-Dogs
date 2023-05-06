@@ -1,6 +1,6 @@
 'use strict'
 
-export const dogsImages = async (numero) => {
+export const getDogsImage = async (numero) => {
 
     const url = `https://dog.ceo/api/breeds/image/random/${numero}`
     const response = await fetch(url)

@@ -4,13 +4,12 @@ class card extends HTMLElement {
     constructor() {
         super()
         this.shadow = this.attachShadow({ mode: 'open' })
-        this.foto = null
-        this.nome = 'Nome'
+        this.foto = ''
+        this.nome = 'nome'
     }
 
-
     static get observedAttributes() {
-        return ['nome', 'foto']
+        return ['foto', 'nome']
     }
 
     attributeChangedCallback(Attributes, oldValue, newValue) {
@@ -23,18 +22,16 @@ class card extends HTMLElement {
     }
 
     component() {
-        
         const card = document.createElement('div')
-        card.classList.add('card')
+        card.classList.add('dog__container')
 
         const foto = document.createElement('img')
-        foto.classList.add('card__image')
+        foto.classList.add('dog__image')
         foto.src = this.foto
 
         const nome = document.createElement('span')
-        nome.classList.add('card__name')
+        nome.classList.add('dog__name')
         nome.textContent = this.nome
-
 
         card.append(foto, nome)
 
@@ -44,33 +41,33 @@ class card extends HTMLElement {
     styles() {
         const css = document.createElement('style')
         css.textContent = `
-        .card {
+        .dog__container {
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
             gap: 10px;
-            height: 279px;
-            width: 308px;
             background-color: #fff;
+            flex-direction: column;
+            height: 200px;
+            width: 220px;
             border-radius: 10px;
-            cursor: pointer;
         }
         
-        .card__image {
-            height: 100%;
-            width: 80%;
+        .dog__image {
+            width: 200px;
+            height: 150px;
             background-size: cover;
             background-position: center;
         }
         
-        .card__name {
+        .dog__name {
+            font-family: 'Poppins', sans-serif;
             font-weight: 700;
-            font-size: 1.3rem;
+            font-size: 1rem;
         }
         `
         return css
     }
 }
 
-customElements.define('card-dogs', card)
+customElements.define('card-dog', card)

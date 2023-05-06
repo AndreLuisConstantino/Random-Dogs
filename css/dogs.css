@@ -10,8 +10,8 @@
     display: flex;
     grid-row: 1;
     align-self: flex-end;
-    height: 4.2vh;
-    width: 10%;
+    height: 50px;
+    width: 200px;
     padding-left: 40px;
 }
 
@@ -20,13 +20,12 @@ button {
     border-radius: 10px;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .container__dogs {
     grid-row: 2;
-    display: flex;
-    flex-wrap: wrap;
-    height: auto;
-    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 40px;
 }
