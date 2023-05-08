@@ -1,20 +1,25 @@
 'use strict'
 
-import { getDogsImage } from "./API/dogsAPI.js"
+import {
+    getDogsImage,
+    getDogsBreeds
+} from "./API/dogsAPI.js"
 
 import './router.js'
 
 const listaDeImagens = await getDogsImage(10)
 
-// listaDeImagens.message.map( (imagem) => {
-//     console.log(imagem)
-// })
+const listaDeRacas = await getDogsBreeds()
+console.log(listaDeRacas)
 
 const criarCardsDogs = (imagem) => {
 
     const cardDogs = document.createElement('card-dog')
     cardDogs.foto = imagem
-    cardDogs.nome = 'teste'
+    
+    const urlImagem = imagem
+    const nomeRaca = urlImagem.split('/')
+    cardDogs.nome = nomeRaca[4]
 
     return cardDogs
 }

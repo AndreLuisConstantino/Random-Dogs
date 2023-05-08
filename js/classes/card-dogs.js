@@ -28,6 +28,7 @@ class card extends HTMLElement {
         const foto = document.createElement('img')
         foto.classList.add('dog__image')
         foto.src = this.foto
+        foto.alt = 'imagem de cachorro'
 
         const nome = document.createElement('span')
         nome.classList.add('dog__name')

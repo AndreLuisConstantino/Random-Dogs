@@ -8,3 +8,12 @@ export const getDogsImage = async (numero) => {
 
     return data
 }
+
+export const getDogsBreeds = async () => {
+
+    const url = `https://dog.ceo/api/breeds/list/all`
+    const response = await fetch(url)
+    const data = response.json()
+
+    return data
+}
