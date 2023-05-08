@@ -20,11 +20,8 @@ const criarCardsDogs = (imagem) => {
 
     const urlImagem = imagem
     const nomeRaca = urlImagem.split('/')
-
     cardDogs.nome = nomeRaca[4]
-
-
-
+    
     return cardDogs
 }
 

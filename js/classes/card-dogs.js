@@ -22,7 +22,7 @@ class card extends HTMLElement {
     }
 
     component() {
-        const card = document.createElement('div')
+        const card = document.createElement('a')
         card.classList.add('dog__container')
 
         const foto = document.createElement('img')
@@ -49,7 +49,7 @@ class card extends HTMLElement {
             gap: 10px;
             background-color: #fff;
             flex-direction: column;
-            height: 200px;
+            height: 250px;
             width: 220px;
             border-radius: 10px;
         }
