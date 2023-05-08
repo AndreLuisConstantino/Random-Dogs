@@ -10,16 +10,20 @@ import './router.js'
 const listaDeImagens = await getDogsImage(10)
 
 const listaDeRacas = await getDogsBreeds()
-console.log(listaDeRacas)
+
+const nomeRacasAPI = Object.keys(listaDeRacas.message)
 
 const criarCardsDogs = (imagem) => {
 
     const cardDogs = document.createElement('card-dog')
     cardDogs.foto = imagem
-    
+
     const urlImagem = imagem
     const nomeRaca = urlImagem.split('/')
+
     cardDogs.nome = nomeRaca[4]
+
+
 
     return cardDogs
 }
@@ -39,3 +43,23 @@ export const recarregarCards = async () => {
     const container = document.querySelector('.container__dogs')
     container.replaceChildren(...cardsNovos)
 }
+
+const compararNomes = (nomeUrl, nomeApi) => {
+    let nomeVerificado = ''
+    let nomeNovo = ''
+    if(nomeUrl == nomeApi){
+        nomeVerificado = nomeApi
+    } else {
+        console.log(nomeApi)
+        nomeApi.forEach((nomeCompleto) => {
+            nomeNovo = `${nomeApi} ${nomeCompleto}`
+        })
+    }
+
+    if (nomeVerificado){
+        return nomeVerificado
+    } else if (nomeNovo) {
+        return nomeNovo
+    }
+}
+
