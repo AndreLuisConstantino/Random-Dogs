@@ -5,3 +5,9 @@
     justify-content: space-evenly;
     align-items: center;
 }
+
+@media (max-width: 425px) {
+    .card-info__container {
+        flex-direction: column;
+    }
+}

@@ -74,3 +74,29 @@ footer {
     transition: .4s;
     font-size: 1.7rem;
 }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #081621;
+}
+
+@media (max-width: 425px) {
+    .title__container {
+        gap: 0;
+    }
+
+    .menu {
+        padding-right: 10px;
+        flex-direction: column;
+        gap: 7px;
+        text-align: center;
+    }
+
+    header img {
+        padding-left: 10px;
+    }
+
+    .title__container {
+       height: auto;
+    }
+}

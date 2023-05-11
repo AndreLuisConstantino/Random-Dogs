@@ -30,3 +30,13 @@ button {
     gap: 50px;
     padding: 10px;
 }
+
+@media (max-width: 425px) {
+    .container {
+        width: auto;
+    }
+
+    .button__container {
+        align-self: center;
+    }
+}
